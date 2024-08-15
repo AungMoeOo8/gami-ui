@@ -3,27 +3,35 @@ import { ButtonSizeVarient, buttonTheme, ButtonVariant } from "./Button.theme";
 import { cn } from "../../../utils/cn";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    size?: keyof ButtonSizeVarient,
+    size?: keyof ButtonSizeVarient
     variant?: keyof ButtonVariant
     fullWidth?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ children, className, size = "md", variant = "filled", fullWidth, ...props }, ref) => {
+    ({
+        children,
+        variant = "filled",
+        size = "md",
+        fullWidth,
+        className,
+        ...props
+    }, ref) => {
+
         const classNames = {
             base: buttonTheme.base,
-            size: buttonTheme.size[size],
             variant: buttonTheme.variant[variant],
-            fullWidth: fullWidth ? buttonTheme.fullWidth : "",
+            size: buttonTheme.size[size],
             disabled: props.disabled ? buttonTheme.disabled : "",
+            fullWidth: fullWidth ? buttonTheme.fullWidth : "",
         }
 
         const combinedClassName = cn(
             classNames.base,
-            classNames.size,
             classNames.variant,
-            classNames.fullWidth,
+            classNames.size, 
             classNames.disabled,
+            classNames.fullWidth,
             className
         )
 

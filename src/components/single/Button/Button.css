@@ -1,0 +1,19 @@
+.btn {
+    @apply px-4 py-2 rounded-[0.25rem];
+
+    &.btn-filled {
+        @apply bg-black text-white;
+    }
+
+    &.btn-outline {
+        @apply border border-[#000];
+    }
+
+    &.btn-ghost {
+        @apply hover:bg-[#e9e9e9] text-[#000] transition;
+    }
+
+    &.btn-disabled {
+        @apply disabled:cursor-not-allowed disabled:text-[#a3a3a3] disabled:bg-[#e9e9e9] disabled:border-none;
+    }
+}

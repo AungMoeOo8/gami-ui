@@ -32,7 +32,7 @@ const Comp = () => {
         <>
             <div>num is: {num}</div>
 
-            <Button className='px-4 py-2' size="md" variant="ghost" onClick={() => setNum(prev => prev + 1)}>Increment</Button>
+            <Button className='px-4 py-2 rounded-2xl' size="md" variant="filled" onClick={() => setNum(prev => prev + 1)}>Increment</Button>
         </>
     )
 }

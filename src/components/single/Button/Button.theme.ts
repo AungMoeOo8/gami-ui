@@ -21,19 +21,19 @@ interface ButtonTheme {
 }
 
 export const buttonTheme: ButtonTheme = {
-    base: "px-4 py-2 rounded-[0.25rem] font-medium",
+    base: "btn",
     size: {
-        xs: 'text-[0.75rem]',
-        sm: 'text-[0.875rem]',
-        md: '',
-        lg: 'text-[1.25rem]',
-        xl: 'text-[1.5rem]',
+        xs: 'btn-xs',
+        sm: 'btn-sm',
+        md: 'btn-md',
+        lg: 'btn-lg',
+        xl: 'btn-xl',
     },
     variant: {
-        filled: "bg-black text-white",
-        outline: "border border-[#000]",
-        ghost: "bg-[#e9e9e9] text-[#000]",
+        filled: "btn-filled",
+        outline: "btn-outline",
+        ghost: "btn-ghost",
     },
     fullWidth: "w-full",
-    disabled: "disabled:cursor-not-allowed disabled:text-[#a3a3a3] disabled:bg-[#e9e9e9] disabled:border-none"
+    disabled: "btn-disabled"
 }
